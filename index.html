@@ -43,6 +43,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/modern-style.css">
     <link rel="stylesheet" href="css/modern-style-fixed.css">
+    <link rel="stylesheet" href="css/testimonial-style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -397,6 +400,93 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="text-gold text-uppercase fw-bold letter-spacing-2">Testimonials</span>
+                <h2>Client Success Stories</h2>
+                <div class="line"></div>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper testimonial-swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"MM Engineers delivered exceptional quality for our corporate office. Their MEP
+                                    solutions are robust and efficient. Highly recommended for their professionalism."
+                                </p>
+                                <div class="client-info">
+                                    <div class="client-avatar">RK</div>
+                                    <div class="client-details">
+                                        <h5>Rajesh Kumar</h5>
+                                        <span>Director, TechPark Solutions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"The interior design for our luxury villa exceeded our expectations. They perfectly
+                                    captured our vision and executed it with precision."</p>
+                                <div class="client-info">
+                                    <div class="client-avatar">AS</div>
+                                    <div class="client-details">
+                                        <h5>Anita Sharma</h5>
+                                        <span>Homeowner</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"Their energy auditing services helped us reduce our operational costs significantly.
+                                    A knowledgeable and reliable team."</p>
+                                <div class="client-info">
+                                    <div class="client-avatar">MD</div>
+                                    <div class="client-details">
+                                        <h5>Michael David</h5>
+                                        <span>Facility Manager, Grand Mall</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p>"Professional, timely, and quality-conscious. MM Engineers is our go-to partner for
+                                    all electrical contracting needs."</p>
+                                <div class="client-info">
+                                    <div class="client-avatar">SP</div>
+                                    <div class="client-details">
+                                        <h5>Suresh P.</h5>
+                                        <span>Project Head, Urban Developers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section id="faq" class="section-padding">
         <div class="container">
@@ -615,6 +705,9 @@
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Custom JS -->
     <script>
         // Initialize AOS
@@ -745,6 +838,36 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+
+        // Initialize Swiper
+        var swiper = new Swiper(".testimonial-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
         });
 
     </script>
